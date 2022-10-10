@@ -504,6 +504,707 @@ sudo apt-get autoremove -y && sudo apt-get clean
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 sudo raspi-config
 
+sudo apt install openssh-server
+
+sudo ufw allow ssh 
+
+sudo systemctl status ssh
+
+https://www.techreally.com/enable-ssh-on-ubuntu/
+sudo apt install flatpak gnome-software-plugin-flatpak gnome-software
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak refresh
+flatpak update
+
+sudo apt-get install afnix algol68g aplus-fsf aspectj asymptote \
+  ats2-lang bash bc bf bsdgames bsh clisp clojure cmake coffeescript \
+  dafny dc dhall elixir emacs-nox erlang f2c fish flex fp-compiler \
+  fsharp g++ gambas3-gb-pcre gambas3-scripter gap gawk gcc gdb gdc \
+  generator-scripting-language genius gforth gfortran ghc ghostscript \
+  gnat gnu-smalltalk gnucobol4 gnuplot gobjc golang gpt groovy guile-3.0 \
+  gzip haxe icont iconx intercal iverilog jasmin-sable jq ksh \
+  libpolyml-dev lisaac livescript llvm lua5.3 m4 make maxima minizinc \
+  mono-devel mono-mcs mono-vbnc nasm neko nickle node-typescript nodejs \
+  ocaml octave openjdk-11-jdk pari-gp parser3-cgi perl php-cli polyml \
+  python3 r-base rakudo ratfor rc regina-rexx ruby ruby-mustache rustc \
+  scala scilab-cli sed slsh spin squirrel3 surgescript swi-prolog tcl \
+  tcsh valac vim wabt xsltproc yabasic yorick zoem zsh # kotlin
+
+sudo apt-get install cmake libpng-dev libgd-dev groff bison curl
+make -C vendor
+
+$ ulimit -s unlimited
+$ ruby QR.rb > QR.rs
+$ rustc QR.rs && ./QR > QR.scala
+$ scalac QR.scala && scala QR > QR.scm
+$ guile QR.scm > QR.sci
+$ scilab-cli -nb -f QR.sci > QR.sed
+$ sed -E -f QR.sed QR.sed > QR.spl
+$ ./vendor/local/bin/spl2c < QR.spl > QR.spl.c && gcc -z muldefs -o QR -I ./vendor/local/include -L ./vendor/local/lib QR.spl.c -lspl -lm &&
+  ./QR > QR.sl
+$ slsh QR.sl > QR.st
+$ gst QR.st > QR.nut
+$ squirrel QR.nut > QR.sml
+$ polyc -o QR QR.sml && ./QR > QR.sq
+$ ruby vendor/subleq.rb QR.sq > QR.ss
+$ surgescript QR.ss > QR.tcl
+$ tclsh QR.tcl > QR.tcsh
+$ tcsh QR.tcsh > QR.t
+$ ruby vendor/thue.rb QR.t > QR.ts
+$ tsc --outFile QR.ts.js QR.ts && nodejs QR.ts.js > QR.unl
+$ ruby vendor/unlambda.rb QR.unl > QR.vala
+$ valac QR.vala && ./QR > QR.mid
+$ mono vendor/local/bin/Vlt.exe /s QR.mid && mono QR.exe > QR.v
+$ iverilog -o QR QR.v && ./QR -vcd-none > QR.vim
+$ vim -EsS QR.vim > QR.vb
+$ vbnc QR.vb && mono ./QR.exe > QR.wasm
+$ $(WASI_RUNTIME) QR.wasm > QR.wat
+$ wat2wasm QR.wat -o QR.wat.wasm && $(WASI_RUNTIME) QR.wat.wasm > QR.ws
+$ ruby vendor/whitespace.rb QR.ws > QR.xslt
+$ xsltproc QR.xslt > QR.yab
+$ yabasic QR.yab > QR.yorick
+$ yorick -batch QR.yorick > QR.azm
+$ zoem -i QR.azm > QR.zsh
+$ zsh QR.zsh > QR.+
+$ a+ QR.+ > qr.adb
+$ gnatmake qr.adb && ./qr > QR.als
+$ LANG=C LD_LIBRARY_PATH=/usr/lib/afnix axi QR.als > QR.aheui
+$ ruby vendor/aheui.rb QR.aheui > QR.a68
+$ a68g QR.a68 > QR.ante
+$ ruby vendor/ante.rb QR.ante > QR.aj
+$ ajc QR.aj && java QR > QR.asy
+$ asy QR.asy > QR.dats
+$ patscc -o QR QR.dats && ./QR > QR.awk
+$ awk -f QR.awk > QR.bash
+$ bash QR.bash > QR.bc
+$ BC_LINE_LENGTH=4000000 bc -q QR.bc > QR.bsh
+$ bsh QR.bsh > QR.bef
+$ cfunge QR.bef > QR.Blc
+$ ruby vendor/blc.rb < QR.Blc > QR.bf
+$ bf -c500000 QR.bf > QR.c
+$ gcc -o QR QR.c && ./QR > QR.cpp
+$ g++ -o QR QR.cpp && ./QR > QR.cs
+$ mcs QR.cs && mono QR.exe > QR.chef
+$ PERL5LIB=vendor/local/lib/perl5 compilechef QR.chef QR.chef.pl &&
+  perl QR.chef.pl > QR.clj
+$ clojure QR.clj > QR.cmake
+$ cmake -P QR.cmake > QR.cob
+$ cobc -O2 -x QR.cob && ./QR > QR.coffee
+$ coffee --nodejs --stack_size=100000 QR.coffee > QR.lisp
+$ clisp QR.lisp > QR.d
+$ gdc -o QR QR.d && ./QR > QR.dfy
+$ dafny QR.dfy && mono QR.exe > QR.dc
+$ dc QR.dc > QR.dhall || true
+$ dhall text --file QR.dhall > QR.exs
+$ elixir QR.exs > QR.el
+$ emacs -Q --script QR.el > QR.erl
+$ escript QR.erl > QR.fsx
+$ fsharpc QR.fsx -o QR.exe && mono QR.exe > QR.false
+$ ruby vendor/false.rb QR.false > QR.fl
+$ flex -o QR.fl.c QR.fl && gcc -o QR QR.fl.c && ./QR > QR.fish
+$ fish QR.fish > QR.fs
+$ gforth QR.fs > QR.f
+$ gfortran -o QR QR.f && ./QR > QR.f90
+$ gfortran -o QR QR.f90 && ./QR > QR.gbs
+$ gbs3 QR.gbs > QR.g
+$ gap -q QR.g > QR.gdb
+$ gdb -q -x QR.gdb > QR.gel
+$ genius QR.gel > QR.gsl
+$ gsl -q QR.gsl > QR.plt
+$ gnuplot QR.plt > QR.go
+$ go run QR.go > QR.gs
+$ ruby vendor/golfscript.rb QR.gs > QR.gpt
+$ mv QR.c QR.c.bak && gpt -t QR.c QR.gpt && gcc -o QR QR.c && ./QR > QR.grass &&
+  mv QR.c.bak QR.c
+$ ruby vendor/grass.rb QR.grass > QR.groovy
+$ groovy QR.groovy > QR.gz
+$ gzip -cd QR.gz > QR.hs
+$ ghc QR.hs && ./QR > QR.hx
+$ haxe -main QR -neko QR.n && neko QR.n > QR.icn
+$ icont -s QR.icn && ./QR > QR.i
+$ ick -bfOc QR.i && gcc -static QR.c -I /usr/include/ick-* -o QR -lick &&
+  ./QR > QR.j
+$ jasmin QR.j && java QR > QR.java
+$ javac QR.java && java QR > QR.js
+$ nodejs QR.js > QR.jq
+$ jq -r -n -f QR.jq > QR.jsfuck
+$ nodejs --stack_size=100000 QR.jsfuck > QR.kt
+$ kotlinc QR.kt -include-runtime -d QR.jar && kotlin QR.jar > QR.ksh
+$ ksh QR.ksh > QR.lazy
+$ lazyk QR.lazy > qr.li
+$ lisaac qr.li && ./qr > QR.ls
+$ lsc QR.ls > QR.ll
+$ llvm-as QR.ll && lli QR.bc > QR.lol
+$ lci QR.lol > QR.lua
+$ lua5.3 QR.lua > QR.m4
+$ m4 QR.m4 > QR.mk
+$ make -f QR.mk > QR.mac
+$ maxima -q --init-mac=QR.mac > QR.mzn
+$ minizinc --solver Gecode --soln-sep '' QR.mzn > QR.il
+$ ilasm QR.il && mono QR.exe > QR.mustache
+$ mustache QR.mustache QR.mustache > QR.asm
+$ nasm -felf QR.asm && ld -m elf_i386 -o QR QR.o && ./QR > QR.neko
+$ nekoc QR.neko && neko QR.n > QR.5c
+$ nickle QR.5c > QR.m
+$ gcc -o QR QR.m && ./QR > QR.ml
+$ ocaml QR.ml > QR.octave
+$ mv QR.m QR.m.bak && octave -qf QR.octave > QR.ook && mv QR.m.bak QR.m
+$ ruby vendor/ook-to-bf.rb QR.ook QR.ook.bf && bf -c500000 QR.ook.bf > QR.gp
+$ gp -f -q QR.gp > QR.p
+$ parser3 QR.p > QR.pas
+$ fpc QR.pas && ./QR > QR.pl
+$ perl QR.pl > QR.pl6
+$ perl6 QR.pl6 > QR.php
+$ php QR.php > QR.png
+$ npiet QR.png > QR.ps
+$ gs -dNODISPLAY -q QR.ps > QR.ppt
+$ ppt -d < QR.ppt > QR.prolog
+$ swipl -q -t qr -f QR.prolog > QR.pr
+$ spin -T QR.pr > QR.py
+$ python3 QR.py > QR.R
+$ R --slave -f QR.R > QR.ratfor
+$ ratfor -o QR.ratfor.f QR.ratfor && gfortran -o QR QR.ratfor.f &&
+  ./QR > QR.rc
+$ rc QR.rc > QR.rexx
+$ rexx ./QR.rexx > QR2.rb
+
+
+
+sudo docker build -t qr .
+sudo docker run --privileged --rm -e CI=true qr
+
+sudo apt-get upgrade peazip -y
+ip a show
+sudo apt-get upgrade netdiscover -y
+sudo netdiscover -i wlp3s0 -P -r 192.168.1.0/24
+
+
+sudo apt-get upgrade curl -y
+sudo apt-get upgrade wget -y
+sudo apt-get upgrade timeit -y
+sudo apt-get upgrade bginfo -y
+sudo apt-get upgrade boxstarter -y
+
+sudo apt-get upgrade glasswire -y --ignore-checksum
+sudo apt-get upgrade cpz-z.install -y
+sudo apt-get upgrade cpz-z -y
+sudo apt-get upgrade gpu-z -y
+sudo apt-get upgrade hwinfo.install -y
+sudo apt-get upgrade hwinfo -y
+sudo apt-get upgrade vcredist140 -y
+sudo apt-get upgrade samsung-magician -y
+sudo apt-get upgrade data-lifeguard-diagnostic -y
+sudo apt-get upgrade crystaldiskinfo.install -y
+sudo apt-get upgrade crystaldiskinfo -y
+
+sudo apt-get upgrade amd-ryzen-chipset -y
+
+sudo apt-get upgrade intel-chipset-device-software -y
+sudo apt-get upgrade intel-graphics-driver -y
+sudo apt-get upgrade intel-me-drivers -y
+sudo apt-get upgrade intel-proset-drivers -y
+sudo apt-get upgrade intel-rst-driver -y
+sudo apt-get upgrade intel-xtu -y
+sudo apt-get upgrade intel-mas -y
+
+sudo apt-get upgrade nvidia-display-driver -y
+sudo apt-get upgrade geforce-game-ready-driver -y
+sudo apt-get upgrade geforce-experience -y
+sudo apt-get upgrade nvidia-geforce-now -y
+sudo apt-get upgrade cuda -y
+sudo apt-get upgrade vulkan-sdk -y
+sudo apt-get upgrade disable-nvidia-telemetry -y
+
+sudo apt-get upgrade sysinternals --params "/installdir:c:\sysinternalssuite" -y
+sudo apt-get upgrade busybox -y
+sudo apt-get upgrade nirlauncher /sysinternals -y
+sudo apt-get upgrade wiztree -y
+sudo apt-get upgrade veracrypt -y
+sudo apt-get upgrade keepass.install -y
+sudo apt-get upgrade keepass -y
+sudo apt-get upgrade testdisk-photorec -y
+
+sudo apt-get upgrade everything -y
+sudo apt-get upgrade launchy -y
+sudo apt-get upgrade revo-uninstaller -y
+
+sudo apt-get upgrade prey -y
+sudo apt-get upgrade privoxy -y
+sudo apt-get upgrade shutup10 -y
+    . oosu10.exe "$formscriptlocation\ooshutup10.cfg" /quiet
+sudo apt-get upgrade openssh -y
+sudo apt-get upgrade openssl -y
+sudo apt-get upgrade gnupg -y
+sudo apt-get upgrade gpg4win -y
+sudo apt-get upgrade openvpn -y
+
+sudo apt-get upgrade microsoft-teams.install -y
+sudo apt-get upgrade microsoft-teams -y
+sudo apt-get upgrade office365proplus -y
+sudo apt-get upgrade skyprforbusiness -y
+sudo apt-get upgrade onedrive -y
+
+sudo apt-get upgrade googlechrome -y
+sudo apt-get upgrade adblockpluschrome -y
+sudo apt-get upgrade ublockorigin-chrome -y
+sudo apt-get upgrade https-everywhere-chrome -y
+sudo apt-get upgrade firefox -y
+sudo apt-get upgrade adblockplus-firefox -y
+sudo apt-get upgrade opera -y
+sudo apt-get upgrade adblockplus-opera -y
+sudo apt-get upgrade microsoft-edge -y
+sudo apt-get upgrade chromium -y
+sudo apt-get upgrade vivaldi -y
+sudo apt-get upgrade brave -y
+
+sudo apt-get upgrade claws-mail -y
+sudo apt-get upgrade thunderbird -y
+sudo apt-get upgrade signal -y
+sudo apt-get upgrade wire -y
+sudo apt-get upgrade telegram -y
+sudo apt-get upgrade hexchat -y
+sudo apt-get upgrade pidgin -y
+sudo apt-get upgrade gajim -y
+
+sudo apt-get upgrade rapidee -y
+sudo apt-get upgrade mremoteng -y
+    
+sudo apt-get upgrade scrcpy -y
+sudo apt-get upgrade nomachine -y
+sudo apt-get upgrade teamviewer -y
+sudo apt-get upgrade anydesk -y
+sudo apt-get upgrade mousewithoutborders -y
+sudo apt-get upgrade putty.install -y
+sudo apt-get upgrade putty -y
+sudo apt-get upgrade winscp.install -y
+sudo apt-get upgrade winscp -y
+sudo apt-get upgrade filezilla -y
+sudo apt-get upgrade muon -y
+sudo apt-get upgrade nextcloud-client -y
+sudo apt-get upgrade dropbox -y
+sudo apt-get upgrade qbittorrent -y
+
+sudo apt-get upgrade win32diskimager.install -y
+sudo apt-get upgrade unetbootin -y
+sudo apt-get upgrade rpi-imager -y
+sudo apt-get upgrade etcher -y
+sudo apt-get upgrade rufus -y
+sudo apt-get upgrade rufus.install -y
+sudo apt-get upgrade yumi -y
+sudo apt-get upgrade ventoy -y
+sudo apt-get upgrade backupper-standard -y
+sudo apt-get upgrade yumi-uefi -y
+
+sudo apt-get upgrade git.install -y
+sudo apt-get upgrade git -y
+sudo apt-get upgrade git-credential-manager-for-windows -y
+sudo apt-get upgrade github-desktop -y
+git clone https://github.com/home-assistant/core.git
+git clone https://github.com/Ylianst/MeshCentral.git
+git clone https://github.com/pritunl/pritunl.git
+git clone https://github.com/Botspot/pi-apps.git
+git clone https://github.com/cisagov/Sparrow.git
+git clone https://github.com/countercept/chainsaw.git
+git clone https://github.com/CrowdStrike/CRT.git
+git clone https://github.com/jivoi/awesome-osint.git
+git clone https://github.com/jmcerrejon/PiKISS.git
+git clone https://github.com/pi-hole/docker-pi-hole.git
+git clone https://github.com/PlummersSoftwareLLC/Primes.git
+git clone https://github.com/proviq/AccountManagement.git
+git clone https://github.com/richardg867/WaybackProxy.git
+git clone https://github.com/SelfhostedPro/Yacht.git
+git clone https://github.com/ukncsc/lme.git
+git clone https://github.com/mandiant/Mandiant-Azure-AD-Investigator.git
+sudo apt-get upgrade gh -y
+sudo apt-get upgrade lfs.install -y
+sudo apt-get upgrade git-lfs -y
+
+sudo apt-get upgrade terraform -y
+sudo apt-get upgrade vagrant -y
+sudo apt-get upgrade packer -y
+sudo apt-get upgrade vault -y
+
+sudo apt-get upgrade virtualbox -y
+sudo apt-get upgrade qemu -y
+sudo apt-get upgrade docker -y
+sudo apt-get upgrade docker-compose -y
+sudo apt-get upgrade docker-toolbox -y
+sudo docker volume create portainer_data
+sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.9.3
+https://localhost:9443
+sudo docker container run -t --name hello-world hello-world:latest
+sudo docker image pull busybox:latest
+sudo docker container run -ti busybox:latest echo "busybox image installed"
+sudo docker container run -ti --name swarm swarm:latest
+sudo docker container run --name registry registry:latest
+sudo docker container run -ti --name alpine alpine:latest echo "alpine image installed"
+sudo docker container run -ti -v /var/run/docker.sock:/var/run/docker.sock --name docker docker:latest echo "docker image installed"
+
+sudo docker image pull pihole/pihole:latest
+
+sudo docker container run -ti --name debian debian:latest echo "debian image installed"
+sudo docker container run -ti --name ubuntu ubuntu:latest echo "ubuntu image installed"
+sudo docker container run -ti --name fedora fedora:latest echo "fedora image installed"
+sudo docker container run -ti --name centos centos:latest echo "centos image installed"
+sudo docker container run -ti --name mageia mageia:latest echo "mageia image installed"
+sudo docker container run -ti --name amazon amazonlinux:latest echo "amazon linux image installed"
+
+sudo docker container run -ti --name gcc gcc:latest echo "gcc image installed"
+sudo docker container run -ti --name golang golang:latest echo "go language image installed"
+sudo docker container run -ti --name python3 python:latest echo "python 3 image installed"
+
+sudo docker container run -ti --name r-base r-base:latest echo "go language image installed"
+sudo docker container run -ti --name haskell haskell:latest echo "go language image installed"
+sudo docker container run -ti --name julia julia:latest echo "go language image installed";&& echo "exit() to quit"
+
+sudo docker container run -ti --name postgres postgres:latest echo "exit() to quit"
+sudo docker container run -ti --name mongo mongo:latest echo "exit() to quit"
+sudo docker container run -ti --name mysql mysql:latest echo "exit() to quit"
+sudo docker container run -ti --name mariadb mariadb:latest echo "exit() to quit"
+
+sudo docker container run -ti --name nginx nginx:latest echo "exit() to quit"
+sudo docker container run -ti --name haproxy haproxy:latest echo "exit() to quit"
+    
+sudo docker container run -ti --name httpd httpd:latest echo "exit() to quit"
+sudo docker container run -ti --name tomcat tomcat:latest echo "exit() to quit"
+sudo docker container run -ti --name maven maven:latest echo "exit() to quit"
+
+sudo docker container run -ti --name openjdk openjdk:latest echo "exit() to quit"
+sudo docker container run -ti --name memcached memcached:latest echo "exit() to quit"
+sudo docker container run -ti --name redis redis:latest echo "exit() to quit"
+sudo docker container run -ti --name node node:latest echo "exit() to quit"
+
+sudo docker container run -ti --name rabbitmq rabbitmq:latest echo "exit() to quit"
+sudo docker container run -ti --name php php:latest echo "exit() to quit"
+sudo docker container run -ti --name perl perl:latest echo "exit() to quit"
+sudo docker container run -ti --name ruby ruby:latest echo "exit() to quit"
+
+sudo docker container run -ti --name nextcloud nextcloud:latest echo "exit() to quit"
+sudo docker container run -ti --name logstash logstash:latest echo "exit() to quit"
+sudo docker container run -ti --name elasticsearch elasticsearch:latest echo "exit() to quit"
+sudo docker container run -ti --name jenkins jenkins:latest echo "exit() to quit"
+
+sudo docker image pull tensorflow/tensorflow                  # download latest image
+    [string]$dockercontainer = (. docker container create -it -p 8888:8888 tensorflow/tensorflow)  # start a jupyter notebook server 
+sudo docker container start $dockercontainer
+
+sudo docker container run -ti --name gcloudsdk google/cloud-sdk:latest echo "google cloud sdk image installed"
+sudo docker container run -ti google/cloud-sdk gcloud init --skip-diagnostics
+sudo docker container run --rm -ti google/cloud-sdk gcloud info
+sudo docker container run --rm -ti google/cloud-sdk gcloud components list
+sudo docker container run --rm -ti google/cloud-sdk gcutil listinstances
+sudo docker container run --rm -ti google/cloud-sdk gsutil ls
+
+docker image pull hashicorp/waypoint:latest
+docker container run -ti hashicorp/waypoint:latest --version
+
+sudo docker container ls -a
+
+sudo docker container logs $dockercontainer
+sudo docker container inspect $dockercontainer
+sudo docker container stop $dockercontainer
+sudo docker container kill $dockercontainer
+sudo docker container rm -f $dockercontainer
+
+sudo docker system prune --all
+
+sudo docker container run -ti --name nanoserver microsoft/nanoserver:latest
+sudo docker container run -ti --name coreserver microsoft/windowsservercore:latest
+sudo docker container run -ti --name powershell microsoft/powershell:latest
+sudo docker container run -d --name nanoiis -d -it -p 80:80 nanoserver/iis
+
+sudo docker container run -ti --name azuresdk azuresdk/azure-cli-python:latest
+
+sudo docker container run -d --name redis -p 127.0.0.1:6379:6379 -v "$pwd/data":/data redis:latest
+sudo docker container run -d --name mysql mysql:latest
+sudo docker container run -d -p 80:80 --name nginx nginx:latest; curl localhost:80
+sudo docker container run -d -p 8080:8080 --name webgoat webgoat/webgoat-7.1:latest; curl localhost:8080; lynx http://192.168.99.100:8080/webgoat/
+sudo docker container run -d -p 1880:1880 --name nodered nodered/node-red-docker
+
+sudo docker container run -ti --name opensuse opensuse:latest echo "opensuse image installed"
+sudo docker container run -ti --name oracle oraclelinux:latest echo "oracle linux image installed"
+sudo docker container run -ti --name 
+
+sudo apt-get upgrade awscli -y
+sudo apt-get upgrade heroku-cli -y
+sudo apt-get upgrade azure-cli -y
+sudo apt-get upgrade octopustools -y
+sudo apt-get upgrade azcopy -y
+sudo apt-get upgrade azcopy10 -y
+sudo apt-get upgrade microsoftazurestorageexplorer -y
+
+sudo apt-get upgrade kubernetes-cli -y
+sudo apt-get upgrade minikube -y
+sudo apt-get upgrade kubernetes-helm -y
+sudo apt-get upgrade kubernetes-helmfile -y
+
+sudo apt-get upgrade nasm -y
+sudo apt-get upgrade llvm -y
+sudo apt-get upgrade vcbuildtools -y
+sudo apt-get upgrade mingw -y
+sudo apt-get upgrade clang -y
+sudo apt-get upgrade cmake.install -y
+sudo apt-get upgrade cmake -y
+sudo apt-get upgrade winlibs -y
+sudo apt-get upgrade ldc -y
+sudo apt-get upgrade ghc -y
+sudo apt-get upgrade x64dbg.portable -y
+sudo apt-get upgrade debugview -y    
+sudo apt-get upgrade ida-free -y
+
+sudo apt-get upgrade dotnetcore -y
+sudo apt-get upgrade dotnetcore-windowshosting -y
+sudo apt-get upgrade dotnetfx -y
+sudo apt-get upgrade ilspy -y
+sudo apt-get upgrade dnspyex -y
+sudo apt-get upgrade nuget.commandline -y
+sudo apt-get upgrade pwsh -y
+
+sudo apt-get upgrade arduino -y
+sudo apt-get upgrade thonny -y
+sudo apt-get upgrade freepascal -y
+sudo apt-get upgrade lazarus -y
+sudo apt-get upgrade python3 -y
+
+pip install --upgrade wheel pip setuptools packaging urllib3 requests oauthlib requests-oauthlib google-auth google-auth-oauthlib webencodings pyyaml confuse soupsieve beautifulsoup4 htmlmin markdown markupsafe jinja2 jsonschema tornado parso jedi pygments mistune pyparsing bleach pandocfilters defusedxml et-xmlfile werkzeug windows-ncurses pywin32 pywinpty pygame freegames scapy mutagen rsa bcrypt imagehash gtts-token gtts pyttsx pyqt5 pytz python-dateutil jdcal six mongoengine pymongo psycopg2 pickleshare cycler matplotlib matplotlib-venn pillow cairosvg seaborn missingno confuse backcall pandocfilters tqdm colorama click termcolor tangled-up-in-unicode wcwidth prompt-toolkit chardet idna notebook ipykernel ipython-genutils ipython jupyter-core jupyter-client nbformat nbconvert terminado ipywidgets widgetsnbextension pivottablejs certifi cachetools decorator traitlets attrs joblib entrypoints testpath send2trash kiwisolver wrapt pyzmq protobuf pyasn1         pyasn1-modules grpcio numpy scipy mpmath sympy astropy astunparse pandas llvmlite numba gast prometheus-client pyrsistent pywavelets openpyxl xlsxwriter h5py networkx visions phik scikit-learn absl-py opencv-python opt-einsum keras-preprocessing pandas-profiling google-pasta threadpoolctl
+
+sudo apt-get upgrade octave -y
+sudo apt-get upgrade scilab -y
+
+sudo apt-get upgrade golang -y
+sudo apt-get upgrade kotlinc -y
+sudo apt-get upgrade julia -y
+
+sudo apt-get upgrade notepadplusplus.install -y
+sudo apt-get upgrade sublimetext3 -y
+sudo apt-get upgrade codeblocks -y
+sudo apt-get upgrade atom.install -y
+sudo apt-get upgrade atom -y
+
+apm install platformio-ide
+apm install platformio-ide-debugger
+apm install platformio-ide-terminal
+
+apm install atom-beautify
+apm install minimap
+apm install file-icons
+apm install highlight-selected
+apm install pigments
+apm install autoclose-html
+apm install tabs-to-spaces
+apm install atom-live-server
+
+sudo apt-get upgrade vim -y
+sudo apt-get upgrade mkdocs -y
+sudo apt-get upgrade xml-notepad -y
+
+sudo apt-get upgrade sqlite -y
+sudo apt-get upgrade mongodb -y
+sudo apt-get upgrade mariadb -y
+sudo apt-get upgrade postgresql -y
+
+sudo apt-get upgrade vscode.install -y
+sudo apt-get upgrade vscode -y
+
+code --install-extension ms-ceintl.vscode-language-pack-en-gb
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+code --install-extension ms-vscode-remote.remote-containers
+
+code --install-extension ms-vscode.powershell
+code --install-extension github.vscode-pull-request-github
+code --install-extension ms-vscode.wordcount
+        
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-dotnettools.vscode-dotnet-runtime
+
+code --install-extension golang.go
+
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension vsciot-vscode.vscode-arduino
+
+code --install-extension mindaro-dev.file-downloader
+code --install-extension mindaro.mindaro
+
+code --install-extension platformio.platformio-ide
+
+code --install-extension samcogan.arm-snippets
+code --install-extension twxs.cmake
+code --install-extension wholroyd.jinja
+
+code --install-extension alefragnani.delphi-keybindings
+code --install-extension alefragnani.delphi-pack
+code --install-extension alefragnani.delphi-themes
+code --install-extension alefragnani.numbered-bookmarks
+code --install-extension alefragnani.pascal
+code --install-extension alefragnani.pascal-formatter
+
+code --list-extensions | xargs -l 1 echo code --install-extension
+  
+sudo apt-get upgrade androidstudio -y
+sudo apt-get upgrade pencil -y
+
+sudo apt-get upgrade hackfont-windows -y
+sudo apt-get upgrade nmap -y
+sudo apt-get upgrade wireshark -y
+sudo apt-get upgrade gnuradio -y
+sudo apt-get upgrade sdrsharp -y
+sudo apt-get upgrade chirp.install -y
+sudo apt-get upgrade chirp -y
+sudo apt-get upgrade spybot -y
+sudo apt-get upgrade fiddler -y
+sudo apt-get upgrade soapui -y
+sudo apt-get upgrade chromedriver -y
+
+sudo apt-get upgrade ghostscript.app -y
+sudo apt-get upgrade scribus -y
+sudo apt-get upgrade inkscape -y
+sudo apt-get upgrade drawio -y
+sudo apt-get upgrade vscode-drawio -y
+sudo apt-get upgrade yed -y
+sudo apt-get upgrade dia -y
+sudo apt-get upgrade irfanview -y
+sudo apt-get upgrade krita -y
+sudo apt-get upgrade gimp -y
+sudo apt-get upgrade gimp-data-extras -y
+sudo apt-get upgrade photogimp -y
+sudo apt-get upgrade darktable -y
+sudo apt-get upgrade lazpaint -y
+sudo apt-get upgrade blender -y
+sudo apt-get upgrade natron.install -y
+sudo apt-get upgrade natron -y
+sudo apt-get upgrade pov-ray -y
+sudo apt-get upgrade sweet-home-3d -y
+sudo apt-get upgrade librecad -y
+sudo apt-get upgrade freecad -y
+
+sudo apt-get upgrade studio -y
+sudo apt-get upgrade stellrium -y
+
+sudo apt-get upgrade lame -y
+sudo apt-get upgrade audacity -y
+sudo apt-get upgrade audacity-lame -y
+sudo apt-get upgrade mixxx -y
+sudo apt-get upgrade lmms -y
+sudo apt-get upgrade musescore -y
+sudo apt-get upgrade winamp -y
+sudo apt-get upgrade audacious -y
+
+sudo apt-get upgrade ffmpeg -y
+sudo apt-get upgrade virtualdub -y
+sudo apt-get upgrade kdenlive -y
+sudo apt-get upgrade openshot -y
+sudo apt-get upgrade shotcut.install -y
+sudo apt-get upgrade shotcut -y
+sudo apt-get upgrade mpv.install -y
+sudo apt-get upgrade mpv -y
+sudo apt-get upgrade vlc -y
+sudo apt-get upgrade handbrake.install -y
+sudo apt-get upgrade handbrake -y
+sudo apt-get upgrade lightworks -y
+
+sudo apt-get upgrade youtube-dl -y
+
+sudo apt-get upgrade jellyfin -y
+sudo apt-get upgrade kodi -y
+sudo apt-get upgrade plexmediaserver -y
+sudo apt-get upgrade plex -y
+sudo apt-get upgrade plexamp -y
+
+sudo apt-get upgrade libreoffice-still -y
+sudo apt-get upgrade calibre -y
+sudo apt-get upgrade onlyoffice -y
+sudo apt-get upgrade gnumeric -y
+sudo apt-get upgrade gnucash -y
+sudo apt-get upgrade ganttproject -y
+sudo apt-get upgrade joplin -y
+sudo apt-get upgrade simplenote -y
+sudo apt-get upgrade adobereader -y
+sudo apt-get upgrade okular -y
+
+sudo apt-get upgrade silverlight -y
+sudo apt-get upgrade flashplayerppapi -y
+sudo apt-get upgrade flashplayerplugin -y
+sudo apt-get upgrade flashplayeractivex -y
+sudo apt-get upgrade adobeair -y
+sudo apt-get upgrade adobeshockwaveplayer -y
+
+sudo apt-get upgrade windirstat -y
+sudo apt-get upgrade wiztree -y
+sudo apt-get upgrade treesizefree -y
+sudo apt-get upgrade conemu -y
+sudo apt-get upgrade microsoft-windows-terminal -y
+            
+sudo apt-get upgrade sqlserver-cmdlineutils -y
+sudo apt-get upgrade sql-server-management-studio --force -y
+sudo apt-get upgrade azure-data-studio -y
+sudo apt-get upgrade chocolatey-azuredatastudio.extension -y
+sudo apt-get upgrade azuredatastudio-powershell -y
+sudo apt-get upgrade azure-data-studio-sql-server-admin-pack -y
+sudo apt-get upgrade powerbi -y
+sudo apt-get upgrade powerbi-reportbuilder -y
+sudo apt-get upgrade daxstudio -y
+
+sudo apt-get upgrade steam -y
+sudo apt-get upgrade goggalaxy -y
+sudo apt-get upgrade epicgameslauncher -y
+sudo apt-get upgrade ubisoft-connect -y
+sudo apt-get upgrade origin -y
+
+sudo apt-get upgrade obs-studio -y
+sudo apt-get upgrade manycam -y
+sudo apt-get upgrade logitechgaming -y
+
+sudo apt-get upgrade godot -y
+sudo apt-get upgrade unreal-linux-toolchain -y
+sudo apt-get upgrade unity-hub -y
+sudo apt-get upgrade unity -y
+sudo apt-get upgrade cheatengine -y
+sudo apt-get upgrade joytokey -y
+sudo apt-get upgrade reshade -y
+
+sudo apt-get upgrade astromenace -y
+sudo apt-get upgrade flightgear -y
+sudo apt-get upgrade openra -y
+sudo apt-get upgrade openttd -y
+sudo apt-get upgrade openxcom -y
+sudo apt-get upgrade freeciv -y
+sudo apt-get upgrade brutaldoom -y
+sudo apt-get upgrade eduke32 -y
+sudo apt-get upgrade zdoom -y
+
+sudo apt-get upgrade hedgewars -y
+sudo apt-get upgrade supertuxkart -y
+sudo apt-get upgrade tuxguitar -y
+sudo apt-get upgrade tux-typing -y
+sudo apt-get upgrade tux-of-math-command -y
+sudo apt-get upgrade tux-paint -y
+sudo apt-get upgrade tux-paint-stamps -y
+
+sudo apt-get upgrade scummvm -y
+sudo apt-get upgrade dosbox -y
+sudo apt-get upgrade mame -y
+sudo apt-get upgrade retroarch -y
+sudo apt-get upgrade emulationstation.install -y
+sudo apt-get upgrade emulationstation -y
+sudo apt-get upgrade dolphin -y
+sudo apt-get upgrade project64 -y
+sudo apt-get upgrade snes9x -y
+sudo apt-get upgrade ppsspp -y
+sudo apt-get upgrade pcsx2.portable -y
+sudo apt-get upgrade cemu -y
+sudo apt-get upgrade fs-uae -y
+
+sudo apt-get upgrade zap -y
+sudo apt-get upgrade pvs-studio -y
+sudo apt-get upgrade burp-suite-free-edition -y
+
+
 #Install the collection of software required
 sudo apt-get install libjs-sphinxdoc libjs-underscore libraspberrypi-bin libraspberrypi-dev libraspberrypi0 pi-bluetooth python-picamera python-sense-emu python3-picamera python3-sense-emu python-picamera-docs python-sense-emu-doc realvnc-vnc-viewer realvnc-vnc-server rpi-chromium-mods sense-hat
 
