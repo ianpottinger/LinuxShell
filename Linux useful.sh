@@ -672,6 +672,19 @@ $ rexx ./QR.rexx > QR2.rb
 
 
 
+sudo apt install flatpak
+sudo add-apt-repository ppa:flatpak/stable
+sudo apt install gnome-software-plugin-flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install flathub com.steam.Client
+flatpak run com.Steam.Client
+sudo flatpak update org.Steam.Client
+sudo flatpak uninstall com.spotify.Client
+flatpak list
+sudo apt-get upgrade -y busybox
+sudo apt install x11-apps -y
+xclock && xcalc
+    
 sudo docker build -t qr .
 sudo docker run --privileged --rm -e CI=true qr
 
@@ -684,19 +697,11 @@ sudo netdiscover -i wlp3s0 -P -r 192.168.1.0/24
 sudo apt-get upgrade curl -y
 sudo apt-get upgrade wget -y
 sudo apt-get upgrade timeit -y
-sudo apt-get upgrade bginfo -y
-sudo apt-get upgrade boxstarter -y
 
 sudo apt-get upgrade glasswire -y --ignore-checksum
-sudo apt-get upgrade cpz-z.install -y
 sudo apt-get upgrade cpz-z -y
 sudo apt-get upgrade gpu-z -y
-sudo apt-get upgrade hwinfo.install -y
 sudo apt-get upgrade hwinfo -y
-sudo apt-get upgrade vcredist140 -y
-sudo apt-get upgrade samsung-magician -y
-sudo apt-get upgrade data-lifeguard-diagnostic -y
-sudo apt-get upgrade crystaldiskinfo.install -y
 sudo apt-get upgrade crystaldiskinfo -y
 
 sudo apt-get upgrade amd-ryzen-chipset -y
@@ -717,32 +722,22 @@ sudo apt-get upgrade cuda -y
 sudo apt-get upgrade vulkan-sdk -y
 sudo apt-get upgrade disable-nvidia-telemetry -y
 
-sudo apt-get upgrade sysinternals --params "/installdir:c:\sysinternalssuite" -y
 sudo apt-get upgrade busybox -y
-sudo apt-get upgrade nirlauncher /sysinternals -y
 sudo apt-get upgrade wiztree -y
 sudo apt-get upgrade veracrypt -y
-sudo apt-get upgrade keepass.install -y
 sudo apt-get upgrade keepass -y
 sudo apt-get upgrade testdisk-photorec -y
 
 sudo apt-get upgrade everything -y
 sudo apt-get upgrade launchy -y
-sudo apt-get upgrade revo-uninstaller -y
 
 sudo apt-get upgrade prey -y
-sudo apt-get upgrade privoxy -y
-sudo apt-get upgrade shutup10 -y
-    . oosu10.exe "$formscriptlocation\ooshutup10.cfg" /quiet
 sudo apt-get upgrade openssh -y
 sudo apt-get upgrade openssl -y
 sudo apt-get upgrade gnupg -y
-sudo apt-get upgrade gpg4win -y
 sudo apt-get upgrade openvpn -y
 
-sudo apt-get upgrade microsoft-teams.install -y
 sudo apt-get upgrade microsoft-teams -y
-sudo apt-get upgrade office365proplus -y
 sudo apt-get upgrade skyprforbusiness -y
 sudo apt-get upgrade onedrive -y
 
@@ -768,17 +763,11 @@ sudo apt-get upgrade hexchat -y
 sudo apt-get upgrade pidgin -y
 sudo apt-get upgrade gajim -y
 
-sudo apt-get upgrade rapidee -y
-sudo apt-get upgrade mremoteng -y
-    
 sudo apt-get upgrade scrcpy -y
 sudo apt-get upgrade nomachine -y
 sudo apt-get upgrade teamviewer -y
 sudo apt-get upgrade anydesk -y
-sudo apt-get upgrade mousewithoutborders -y
-sudo apt-get upgrade putty.install -y
 sudo apt-get upgrade putty -y
-sudo apt-get upgrade winscp.install -y
 sudo apt-get upgrade winscp -y
 sudo apt-get upgrade filezilla -y
 sudo apt-get upgrade muon -y
@@ -786,18 +775,15 @@ sudo apt-get upgrade nextcloud-client -y
 sudo apt-get upgrade dropbox -y
 sudo apt-get upgrade qbittorrent -y
 
-sudo apt-get upgrade win32diskimager.install -y
 sudo apt-get upgrade unetbootin -y
 sudo apt-get upgrade rpi-imager -y
 sudo apt-get upgrade etcher -y
 sudo apt-get upgrade rufus -y
-sudo apt-get upgrade rufus.install -y
 sudo apt-get upgrade yumi -y
 sudo apt-get upgrade ventoy -y
 sudo apt-get upgrade backupper-standard -y
 sudo apt-get upgrade yumi-uefi -y
 
-sudo apt-get upgrade git.install -y
 sudo apt-get upgrade git -y
 sudo apt-get upgrade git-credential-manager-for-windows -y
 sudo apt-get upgrade github-desktop -y
@@ -932,8 +918,6 @@ sudo apt-get upgrade heroku-cli -y
 sudo apt-get upgrade azure-cli -y
 sudo apt-get upgrade octopustools -y
 sudo apt-get upgrade azcopy -y
-sudo apt-get upgrade azcopy10 -y
-sudo apt-get upgrade microsoftazurestorageexplorer -y
 
 sudo apt-get upgrade kubernetes-cli -y
 sudo apt-get upgrade minikube -y
@@ -942,10 +926,8 @@ sudo apt-get upgrade kubernetes-helmfile -y
 
 sudo apt-get upgrade nasm -y
 sudo apt-get upgrade llvm -y
-sudo apt-get upgrade vcbuildtools -y
 sudo apt-get upgrade mingw -y
 sudo apt-get upgrade clang -y
-sudo apt-get upgrade cmake.install -y
 sudo apt-get upgrade cmake -y
 sudo apt-get upgrade winlibs -y
 sudo apt-get upgrade ldc -y
@@ -977,10 +959,8 @@ sudo apt-get upgrade golang -y
 sudo apt-get upgrade kotlinc -y
 sudo apt-get upgrade julia -y
 
-sudo apt-get upgrade notepadplusplus.install -y
 sudo apt-get upgrade sublimetext3 -y
 sudo apt-get upgrade codeblocks -y
-sudo apt-get upgrade atom.install -y
 sudo apt-get upgrade atom -y
 
 apm install platformio-ide
@@ -1005,7 +985,6 @@ sudo apt-get upgrade mongodb -y
 sudo apt-get upgrade mariadb -y
 sudo apt-get upgrade postgresql -y
 
-sudo apt-get upgrade vscode.install -y
 sudo apt-get upgrade vscode -y
 
 code --install-extension ms-ceintl.vscode-language-pack-en-gb
@@ -1054,10 +1033,7 @@ sudo apt-get upgrade nmap -y
 sudo apt-get upgrade wireshark -y
 sudo apt-get upgrade gnuradio -y
 sudo apt-get upgrade sdrsharp -y
-sudo apt-get upgrade chirp.install -y
 sudo apt-get upgrade chirp -y
-sudo apt-get upgrade spybot -y
-sudo apt-get upgrade fiddler -y
 sudo apt-get upgrade soapui -y
 sudo apt-get upgrade chromedriver -y
 
@@ -1076,7 +1052,6 @@ sudo apt-get upgrade photogimp -y
 sudo apt-get upgrade darktable -y
 sudo apt-get upgrade lazpaint -y
 sudo apt-get upgrade blender -y
-sudo apt-get upgrade natron.install -y
 sudo apt-get upgrade natron -y
 sudo apt-get upgrade pov-ray -y
 sudo apt-get upgrade sweet-home-3d -y
@@ -1092,19 +1067,15 @@ sudo apt-get upgrade audacity-lame -y
 sudo apt-get upgrade mixxx -y
 sudo apt-get upgrade lmms -y
 sudo apt-get upgrade musescore -y
-sudo apt-get upgrade winamp -y
 sudo apt-get upgrade audacious -y
 
 sudo apt-get upgrade ffmpeg -y
 sudo apt-get upgrade virtualdub -y
 sudo apt-get upgrade kdenlive -y
 sudo apt-get upgrade openshot -y
-sudo apt-get upgrade shotcut.install -y
 sudo apt-get upgrade shotcut -y
-sudo apt-get upgrade mpv.install -y
 sudo apt-get upgrade mpv -y
 sudo apt-get upgrade vlc -y
-sudo apt-get upgrade handbrake.install -y
 sudo apt-get upgrade handbrake -y
 sudo apt-get upgrade lightworks -y
 
@@ -1127,7 +1098,6 @@ sudo apt-get upgrade simplenote -y
 sudo apt-get upgrade adobereader -y
 sudo apt-get upgrade okular -y
 
-sudo apt-get upgrade silverlight -y
 sudo apt-get upgrade flashplayerppapi -y
 sudo apt-get upgrade flashplayerplugin -y
 sudo apt-get upgrade flashplayeractivex -y
@@ -1190,7 +1160,6 @@ sudo apt-get upgrade scummvm -y
 sudo apt-get upgrade dosbox -y
 sudo apt-get upgrade mame -y
 sudo apt-get upgrade retroarch -y
-sudo apt-get upgrade emulationstation.install -y
 sudo apt-get upgrade emulationstation -y
 sudo apt-get upgrade dolphin -y
 sudo apt-get upgrade project64 -y

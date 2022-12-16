@@ -1,4 +1,9 @@
 # https://davejansen.com/installing-manjaro-on-the-gpd-win-max/
+(cat /etc/os-release | grep VARIANT_ID | cut -d '"' -f 2):
+
+pacman -Sy archiso
+git clone https://github.com/bhaiest/holoiso/
+sudo mkarchiso -v holoiso
 
 recoveryinit
 
