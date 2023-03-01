@@ -679,6 +679,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak install flathub com.steam.Client
 flatpak run com.Steam.Client
 sudo flatpak update org.Steam.Client
+sudo apt-get update libc6-i386
 sudo flatpak uninstall com.spotify.Client
 flatpak list
 sudo apt-get upgrade -y busybox
@@ -1125,6 +1126,7 @@ sudo apt-get upgrade goggalaxy -y
 sudo apt-get upgrade epicgameslauncher -y
 sudo apt-get upgrade ubisoft-connect -y
 sudo apt-get upgrade origin -y
+sudo apt-get install libc6-i386
 
 sudo apt-get upgrade obs-studio -y
 sudo apt-get upgrade manycam -y
