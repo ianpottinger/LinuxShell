@@ -1,7 +1,7 @@
 # https://davejansen.com/installing-manjaro-on-the-gpd-win-max/
 (cat /etc/os-release | grep VARIANT_ID | cut -d '"' -f 2):
 
-pacman -Sy archiso
+pacman -Syu archiso
 git clone https://github.com/bhaiest/holoiso/
 sudo mkarchiso -v holoiso
 
@@ -38,8 +38,8 @@ sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/monitors.xml
 sudo pacman-mirrors --country United_Kingdom && sudo pacman -Syu
 sudo pacman-mirrors --fasttrack && sudo pacman -Syu
 
-sudo pacman -S mesa-git lib32-mesa-git
-sudo pacman -S lm_sensors
+sudo pacman -Syu mesa-git lib32-mesa-git
+sudo pacman -Syu lm_sensors
 sudo sensors-detect
 
 echo "dev.i915.perf_stream_paranoid=0" | sudo tee /usr/lib/sysctl.d/60-mdapi.conf
@@ -51,7 +51,7 @@ mkdir -p ~/.steam/root/compatibilitytools.d;
 tar -xvf ~/Downloads/Proton*GE*.tar.gz -C ~/.steam/root/compatibilitytools.d/
 
 Creates an edid folder inside /lib/firmware if it does not already exist
-sudo pacman -S extra/mesa multilib/lib32-mesa holo/gamescope
+sudo pacman -Syu extra/mesa multilib/lib32-mesa holo/gamescope
 
 echo "IgnorePkg = gamescope mesa lib32-mesa" | sudo tee /etc/pacman.conf
 
